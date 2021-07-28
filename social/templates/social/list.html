@@ -1,0 +1,14 @@
+{% extends 'social/base.html' %}
+{% load static %}
+
+{% block contents %}
+
+<div class="container">
+    <h1 class="">Feed</h1>
+    {% for post in posts %}
+        <h2 class=""><a class="text-decoration-none username-code" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+        <p class="article-content">{{ post.contents }}</p>
+    {% endfor %}
+
+</div>
+{% endblock %}
