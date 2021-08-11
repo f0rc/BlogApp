@@ -7,8 +7,8 @@
     <h1 class="">Feed</h1>
     {% for post in posts %}
         <h2 class=""><a class="text-decoration-none username-code" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-        <p class="article-content">{{ post.contents }}</p>
-        <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+        <p class="article-content mb-0">{{ post.contents }}</p>
+        <small class="text-muted mb-5">{{ post.date_posted|date:"F d, Y" }}</small>
     {% endfor %}
 
 </div>
