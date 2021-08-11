@@ -21,7 +21,7 @@
     <!--- Navbar -->
         <nav class="navbar navbar-expand navbar-dark navbarcolors">
             <div class="container">
-                <a href="{% url 'index' %}" class="navbar-brand">Home</a>
+                <a href="{% url 'blog-home' %}" class="navbar-brand">Feed</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -33,9 +33,9 @@
                             {% endif %} 
                         </li>
                         <li class="nav-item nav-link nounderline">
-                            {% if user.is_authenticated %}
+                        {% if user.is_anonymous %}                       
                             <a class="nav-link" href={% url 'login' %}>Login</a>
-                            {% endif %} 
+                        {% endif %} 
                         </li>
                     </ul>
                 </div>
