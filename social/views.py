@@ -39,7 +39,7 @@ class PostListView(LoginRequiredMixin,ListView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-class PostDetailView(DetailView):
+class PostDetailView(LoginRequiredMixin, DetailView):
     model = Post
     
 class PostCreateView(LoginRequiredMixin, CreateView):
