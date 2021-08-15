@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractUser
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
+from datetime import datetime
 
 
 class User(AbstractUser):
@@ -18,7 +19,7 @@ class Post(models.Model):
     ]
     #the input places in admin site/make post thing
 
-    title = models.CharField(default="",max_length=100)
+    title = models.CharField(default=datetime.today().strftime('%m/%d'),max_length=100)
     contents= models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
