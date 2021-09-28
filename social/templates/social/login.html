@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block contents %}
-<div class="container">
-    <h1>Login</h1>
+<div class="container welcom-png">
+    <!--<h1 class="welcom-png">Login</h1>-->
     <form method="post" action={% url 'login' %}>
         {% csrf_token %}
         {{ form }}

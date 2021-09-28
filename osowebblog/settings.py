@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'social',
     'django_oso',
     'crispy_forms',
+    'crispy_bootstrap5',
     #"compressor",
 ]
 
@@ -145,6 +146,10 @@ LOGOUT_REDIRECT_URL = 'index'
 
 
 django_heroku.settings(locals())
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
 

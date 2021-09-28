@@ -1,24 +1,75 @@
-.wrapper{
-  background-color: #DFDFDF;
+
+
+.navbarcolors {
+  background-color: #050605;
+  padding: 0%;
+}
+.main-bg {
+  background-color: #0c2006;
 }
 
-.navbarcolors{
-  background-color:#343434 ;
+.username-code {
+  color: #db5a42;
+}
+.welcom-png {
+  color: #ffffff;
 }
 
-.username-code{
-  color: #0E34A0;
+.newpost-id {
+  background-color: #724cf9;
+  color: #ffffff;
 }
 
-.newpost-id{
-  background-color: #5F5980;
-  color: white;
-}
-
-.mainsectionsthing{
-  background-color: #DFDFDF;
+.mainsectionsthing {
+  background-color: #383838;
 }
 
 .mt-0 {
   margin-top: 0 !important;
+}
+.jobs {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.mb-0 {
+  color: #ffd275;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.text-muted {
+  color: #507dbc;
+}
+.nounderline {
+  text-decoration: none;
+}
+a.nounderline:visited {
+  text-decoration: none;
+}
+
+a.nounderline:hover {
+  text-decoration: none;
+  color: red;
+}
+
+a.nounderline:active {
+  text-decoration: none;
+}
+p {
+  color: #ffd275;
+}
+
+.monkey-text{
+  font-size: 18px;
+}
+.somenewtxt{
+  color: white;
+}
+.asteriskField{
+  color: red;
+}
+
+.big-text{
+  font-size: 30px;
 }
