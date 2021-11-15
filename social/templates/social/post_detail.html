@@ -1,7 +1,6 @@
 {% extends 'social/base.html' %}
 {% load static %}
 {% block contents %}
-<<<<<<< HEAD
   <div class="container main-txt">      
     <h2 class="username-code">{{ object.title }}</h2>
     <p class="post-txt">{{ post.contents }}</p>
@@ -14,23 +13,5 @@
         </div>
       {% endif %}
   </div>
-=======
-  <article class="media content-section">
-    <div class="container jobs">      
-      <h2 class="username-code">{{ object.title }}</h2>
-      <p class="monkey-text">{{ post.contents }}</p>
-      <div class="article-metadata">
-        <a class="mr-2 nounderline username-code" href="#">{{ object.author }}</a>
-        <small class="welcom-png">{{ object.date_posted|date:"F d, Y" }}</small>
-        {% if object.author == user %}
-          <div>
-            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
-            <a class="btn btn-sm my-2 newpost-id" href="{% url 'post-update' object.id %}">Update</a>            
-          </div>
-        {% endif %}
-      </div>
-    </div>
-  </article>
->>>>>>> 6a3865d93de14c1cedce2f60ba4e145838de4d80
 
 {% endblock %}
