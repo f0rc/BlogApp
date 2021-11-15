@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block contents %}
+<<<<<<< HEAD
     <div class="center">
         <!--<h1 class="welcom-png">Login</h1>-->
         <form method="post" action={% url 'login' %}>
@@ -22,4 +23,17 @@
             <input type="submit" value="login" required>
         </form>
     </div>
+=======
+<div class="container welcom-png">
+    <!--<h1 class="welcom-png">Login</h1>-->
+    <form method="post" action={% url 'login' %}>
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="login">
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+</div>
+
+
+>>>>>>> 6a3865d93de14c1cedce2f60ba4e145838de4d80
 {% endblock %}

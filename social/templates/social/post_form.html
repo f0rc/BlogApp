@@ -1,6 +1,7 @@
 {% extends "social/base.html" %}
 {% load crispy_forms_tags %}
 {% block contents %}
+<<<<<<< HEAD
     <div class="container main-txt">
         <form method="POST">
             {% csrf_token %}
@@ -10,6 +11,17 @@
             </fieldset>
             <div class="">
                 <button class="btn btn-1" type="submit">Post</button>
+=======
+    <div class="container jobs monkey-text somenewtxt">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="mb-4 username-code big-text">New Post</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Post</button>
+>>>>>>> 6a3865d93de14c1cedce2f60ba4e145838de4d80
             </div>
         </form>
     </div>

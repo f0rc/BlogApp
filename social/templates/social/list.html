@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block contents %}
+<<<<<<< HEAD
 <div class="main-list">
     <h1 class="welcom-txt">Feed</h1>
     {% for post in posts %}
@@ -17,6 +18,15 @@
             $clamp(paragraph, { clamp: 3 });
         </script>
 
+=======
+
+<div class="container jobs">
+    <h1 class="welcom-png">Feed</h1>
+    {% for post in posts %}
+        <h2 class="mt-4 mb-0"><a class="text-decoration-none username-code" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+        <p class="article-content mb-0">{{ post.contents }}</p>
+        <small class="welcom-png mb-5">{{ post.date_posted|date:"F d, Y" }}</small>
+>>>>>>> 6a3865d93de14c1cedce2f60ba4e145838de4d80
     {% endfor %}
 
 </div>
