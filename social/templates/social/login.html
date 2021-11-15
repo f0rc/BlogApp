@@ -1,0 +1,25 @@
+{% extends 'social/base.html' %}
+{% load static %}
+
+{% block contents %}
+    <div class="center">
+        <!--<h1 class="welcom-png">Login</h1>-->
+        <form method="post" action={% url 'login' %}>
+            <h1 class="cen-t">Login</h1>
+            {% csrf_token %}
+            <div class="txtfield">
+                {% csrf_token %}
+                <input type="username" name="username" required>
+                <span></span>
+                <label for="username">Username</label>
+            </div>
+            <div class="txtfield">
+                {% csrf_token %}
+                <input type="password" name="password" required>
+                <span></span>
+                <label for="password">Password</label>                
+            </div>           
+            <input type="submit" value="login" required>
+        </form>
+    </div>
+{% endblock %}

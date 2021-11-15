@@ -1,0 +1,17 @@
+{% extends 'social/base.html' %}
+{% load static %}
+{% block contents %}
+  <div class="container main-txt">      
+    <h2 class="username-code">{{ object.title }}</h2>
+    <p class="post-txt">{{ post.contents }}</p>
+      <a class="text-decoration-none username-code" href="#">@{{ object.author }}</a>
+      <small class="date-txt">{{ object.date_posted|date:"F d, Y" }}</small>
+      {% if object.author == user %}
+        <div>
+          <a class="btn btn-del ml-0" href="{% url 'post-delete' object.id %}">Delete</a>
+          <a class="btn btn-1" href="{% url 'post-update' object.id %}">Update</a>            
+        </div>
+      {% endif %}
+  </div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "social/base.html" %}
+{% block contents %}
+    <div class="container main-txt">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset>
+                <h2 class="welcom-txt mb-3">Are you sure you want to delete the post "{{ object.title }}"</h2>
+                <p class="post-txt small-txt">{{ post.contents }}</p>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-danger" type="submit">Yes, Delete</button>
+                <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock contents %}
