@@ -3,29 +3,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  
 }
 
 ::selection {
-  background: #149414; /* WebKit/Blink Browsers */
+  background: #149414;
 }
 ::-moz-selection {
-  background: #149414; /* Gecko Browsers */
+  background: #149414;
 }
 html, body{
   height: 100%;
 }
 
 body{
-  /* display: flex; */
-  /*background colors*/
-  background: #0A1931;
-  /* background: -webkit-linear-gradient(bottom, #3d405b, #f4f1de);
-  background: -moz-linear-gradient(bottom, #3d405b, #f4f1de);
-  background: linear-gradient(to top, #3d405b, #f4f1de); */
-}
 
+  background: #0A1931;
+
+}
+/* tuncate liens */
+p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;                 /* IE6 needs any width */
+  overflow: hidden;              /* "overflow" value must be different from  visible"*/ 
+  -o-text-overflow: ellipsis;    /* Opera < 11*/
+  text-overflow:    ellipsis;    /* IE, Safari (WebKit), Opera >= 11, FF > 6 */
+}
+/* list items */
 .main-list{
   padding-left: 25%;
   padding-right: 25%;
@@ -43,9 +47,11 @@ body{
   padding-right: 15%;
 }
 .welcom-txt{
+  font-family: Poppins, sans-serif;
   color: #f1faee;
 }
 .username-code{
+  font-family: Poppins, sans-serif;
   color: #81b29a;
 }
 .username-code:hover{
@@ -56,11 +62,12 @@ body{
   padding-right: 25%;
 }
 .post-txt{
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: #f4f1de;
   font-family: Poppins, sans-serif;
 }
 .date-txt{
+  font-family: Poppins, sans-serif;
   color: #f2cc8f;
 }
 .buttons {
@@ -276,21 +283,12 @@ input[type="submit"]{
   outline: none;
 }
 input[type="password"]{
-  color: #FFC947;
+  color: #0A1931;
 
 }
 input[type="username"]{
-  color: #FFC947;
+  color: #0A1931;
 
 }
-/* input[type="submit"]:hover{
-  border-color: #FFC947;
-  transition: .5s;
-}
-
-.input-class{
-  color: #FFC947;
-} */
-
 
 

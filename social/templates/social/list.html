@@ -7,16 +7,9 @@
     {% for post in posts %}
         <div class="mb-4">
             <h2 class=""><a class="mt-0 text-decoration-none username-code" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-            <p class="post-txt mb-0" id="clamp-this-module">{{ post.contents }}</p>
+            <p class="post-txt mb-0" id="clamp-this-module" >{{ post.contents }}</p>
             <small class="date-txt">{{ post.date_posted|date:"F d, Y" }}</small>        
         </div>
-
-
-        <script>
-            var paragraph = document.getElementById("clamp-this-module");
-            $clamp(paragraph, { clamp: 3 });
-        </script>
-
     {% endfor %}
 
 </div>
