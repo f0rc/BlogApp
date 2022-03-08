@@ -21,7 +21,7 @@ body{
 
 }
 /* tuncate liens */
-p {
+.truncate {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;                 /* IE6 needs any width */
