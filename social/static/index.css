@@ -20,6 +20,7 @@ body{
   background: #0A1931;
 
 }
+
 /* tuncate liens */
 .truncate {
   display: -webkit-box;
@@ -65,6 +66,9 @@ body{
   font-size: 1.0rem;
   color: #f4f1de;
   font-family: Poppins, sans-serif;
+}
+.post-style{
+  white-space: pre-line;
 }
 .date-txt{
   font-family: Poppins, sans-serif;

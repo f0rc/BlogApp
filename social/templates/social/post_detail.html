@@ -3,7 +3,7 @@
 {% block contents %}
   <div class="container main-txt">      
     <h2 class="username-code">{{ object.title }}</h2>
-    <p class="post-txt">{{ post.contents }}</p>
+    <p class="post-txt post-style">{{ post.contents }}</p>
       <a class="text-decoration-none username-code" href="#">@{{ object.author }}</a>
       <small class="date-txt">{{ object.date_posted|date:"F d, Y" }}</small>
       {% if object.author == user %}
