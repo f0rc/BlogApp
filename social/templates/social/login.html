@@ -9,13 +9,13 @@
             {% csrf_token %}
             <div class="txtfield">
                 {% csrf_token %}
-                <input type="username" name="username" required>
+                <input  maxlength="5" type="username" name="username" required>
                 <span></span>
                 <label for="username">Username</label>
             </div>
             <div class="txtfield">
                 {% csrf_token %}
-                <input type="password" name="password" required>
+                <input type="password" maxlength="10" name="password" required>
                 <span></span>
                 <label for="password">Password</label>                
             </div>           
