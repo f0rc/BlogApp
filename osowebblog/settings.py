@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-#SECRET_KEY = "123"
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get("SECRET_KEY") == True)
+DEBUG = (os.environ.get("DEBUG_KEY") == "True")
 #DEBUG = True
 ALLOWED_HOSTS = ['brxblog.herokuapp.com']
 
