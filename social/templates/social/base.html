@@ -20,13 +20,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         
         <!--script-->
-        <script src="{% static "jobs.js" %}" type="text/javascript"></script>       
+        <script src="{% static "YOUAREIDIOT.js" %}" type="text/javascript"></script>       
             <title>Blog</title>       
     </head>
     <body>
-        <!-- welcome thing-->
-        <div class="main-bg main-txt text-center">
-            {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
+        <!-- welcome thing-->        
+        <div class="main-bg main-txt text-center">            
             <h1 class="welcom-txt text-decoration-none">
                 <a class="welcom-txt text-decoration-none mainpage" href="{% url 'blog-home' %}">Welcome </a>
                 <span class="username">@{{ user.username }}.</span>

@@ -18,16 +18,9 @@ import django_heroku
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
-
-
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get("DEBUG_KEY") == "True")
-#DEBUG = True
+
 ALLOWED_HOSTS = ['brxblog.herokuapp.com']
 
 
@@ -41,10 +34,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social',
-    'django_oso',
     'crispy_forms',
     'crispy_bootstrap5',
-    #"compressor",
 ]
 
 MIDDLEWARE = [
@@ -73,6 +64,11 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 WSGI_APPLICATION = 'osowebblog.wsgi.application'
@@ -134,12 +130,13 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+
 AUTH_USER_MODEL = 'social.User'
 
 
-LOGIN_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
-LOGOUT_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = '/'
 
 
 django_heroku.settings(locals())
@@ -147,22 +144,3 @@ django_heroku.settings(locals())
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
-
-
-
-
-"""
-
-COMPRESS_PRECOMPILERS = (
-    ('text/x-scss', 'django_libsass.SassCompiler'),
-)
-
-STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
-
-
-COMPRESS_PRECOMPILERS = (
-    ('text/x-scss', 'django_libsass.SassCompiler'),
-)
-
-
-"""

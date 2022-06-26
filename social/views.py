@@ -1,13 +1,7 @@
 from django.shortcuts import redirect, render
-from django.http import HttpResponse
-from .models import Post
-from django.http import HttpResponseNotAllowed, HttpResponseRedirect
-from django.urls import reverse
-from .forms import PostForm
-from django.contrib.auth.decorators import login_required, permission_required
-from django.core.exceptions import PermissionDenied
-from django_oso.auth import authorize
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth import authenticate, login
 from django.views.generic import (
     ListView,
     DetailView,
@@ -15,11 +9,8 @@ from django.views.generic import (
     UpdateView,
     DeleteView
 )
-from django.contrib.auth import authenticate, login
 
-
-
-# Create your views here.
+from .models import Post
 
 
 @login_required
@@ -86,32 +77,3 @@ def login_view(request):
         return redirect('')
     else:
         return redirect('logout')
-    
-
-# @login_required
-# def new_post(request):
-#     if request.method == 'POST':
-#         # This branch runs when the user submits the form.
-
-#         # Create an instance of the form with the submitted data.
-#         form = PostForm(request.POST)
-
-#         # Convert the form into a model instance.  commit=False postpones
-#         # saving to the database.
-#         post = form.save(commit=False)
-
-#         # Make the currently logged in user the Post creator.
-#         post.date_posted = request.user
-
-#         # Save post in database.
-#         post.save()
-
-#         # Rediect to post list.
-#         return HttpResponseRedirect(reverse('index'))
-#     elif request.method == 'GET':
-#         # GET evaluated when form loaded.
-#         form = PostForm()
-#         # Render the view with the form for the user to fill out.
-#         return render(request, 'social/new_post.html', { 'form': form })
-#     else:
-#         return HttpResponseNotAllowed(['GET', 'POST'])
