@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
-DEBUG = True #os.environ.get("DEBUG_KEY") == "True"
+DEBUG = (os.environ.get("DEBUG_KEY") == "True") #os.environ.get("DEBUG_KEY") == "True"
 
 ALLOWED_HOSTS = ['brxblog.herokuapp.com']
 
@@ -66,10 +66,6 @@ TEMPLATES = [
     },
 ]
 
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
 
 WSGI_APPLICATION = 'osowebblog.wsgi.application'
 
